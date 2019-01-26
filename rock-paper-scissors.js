@@ -7,14 +7,14 @@ function computerPlay() {
     let compRoll = Math.random();
 
     if (compRoll <= (1/3)) {
-        console.log('Rock!');
+        console.log('Computer throws Rock!');
         computerSelection = "ROCK";
         
     } else if (compRoll <= (2/3)) {
-        console.log('Paper!');
+        console.log('Computer throws Paper!');
         computerSelection = "PAPER";
     } else {
-        console.log('Scissors!');
+        console.log('Computer throws Scissors!');
         computerSelection = "SCISSORS";
     }
 }
