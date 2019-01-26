@@ -1,6 +1,7 @@
 //Global variables
 let computerSelection;
 let playerSelection;
+let response;
 
 //Choice for the computer with an equal 1/3 chance for each decision
 function computerPlay() {
@@ -32,7 +33,6 @@ function playerPlay() {
 
 //One round rock paper scissor function 
 function oneRound() {
-    let response;
     playerPlay();
     computerPlay();
 
@@ -83,15 +83,19 @@ function game() {
     let computerScore = 0;
     let score;
     for (i=0;i<5;i++){
+        console.log(`----------------ROUND ${i + 1}-----------------`);
         oneRound();
         let result = playerSelection + computerSelection;
 
         if (result == "ROCKSCISSORS" || result == "SCISSORSPAPER" || result == "PAPERROCK") {
-            playerScore++;
+            ++playerScore;
         } else if (result == "ROCKPAPER" || result == "SCISSORSROCK" || result == "PAPERSCISSORS") {
-            computerScore++;
+            ++computerScore;
         }
-
+        console.log(response);
+        if (i<4) {
+            console.log(`Your current score is: ${playerScore} while computer's score is: ${computerScore}`);
+        }
     } 
 
     if (playerScore>computerScore) {
@@ -104,5 +108,6 @@ function game() {
     } else {
         score = "Aaand the crowd goes mild... It's a draw with " + playerScore + " points each.";
     }
+    console.log(`----------------FINAL RESULT-----------------`)
     return score;
 }
