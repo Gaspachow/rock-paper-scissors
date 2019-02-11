@@ -1,0 +1,22 @@
+.scores {
+    text-align: center;
+    margin: 200px 0 0 0;
+
+}
+
+.scoreNumber {
+    display: inline-block;
+}
+
+.playerScore, .computerScore {
+    margin: 10px 40px;
+    text-align: center;
+}
+
+.computerInfo, .roundInfo {
+    text-align: center;
+}
+
+.buttons {
+    text-align: center;
+}

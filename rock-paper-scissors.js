@@ -105,6 +105,8 @@ function game() {
         computerScore = 0;
         computerScoreDisplay.textContent = computerScore;
         playerScoreDisplay.textContent = playerScore;
+        roundInfo.textContent = '';
+        compInfo.textContent = '';
         return finalScore;
     }
 }
